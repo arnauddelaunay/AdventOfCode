@@ -4,11 +4,12 @@ from time import time
 
 class AOCDay:
 
-    def __init__(self):
-        self.day = None
+    def __init__(self, day=None, split_lines=True):
+        self.day = day
+        self.split_lines = split_lines
 
     def execute(self, test=False):
-        inp = read_input(self.day, test=test)
+        inp = read_input(self.day, split_lines=self.split_lines, test=test)
         t1 = time()
         res1 = self.run1(inp)
         t2 = time()
