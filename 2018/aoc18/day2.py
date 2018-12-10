@@ -18,6 +18,7 @@ class AOCDay2(AOCDay):
 
     def __init__(self):
         self.day = 2
+        self.split_lines = True
 
     def run1(self, inp):
         c2s, c3s = zip(*map(lambda x: get_count_of_2_and_3(Counter(x).values()), inp))

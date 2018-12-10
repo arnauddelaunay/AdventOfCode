@@ -7,7 +7,7 @@ from .day4 import AOCDay4
 #from .day7 import AOCDay7
 #from .day8 import AOCDay8
 #from .day9 import AOCDay9
-#from .day10 import AOCDay10
+from .day10 import AOCDay10
 #from .day11 import AOCDay11
 #from .day12 import AOCDay12
 #from .day13 import AOCDay13
@@ -34,7 +34,7 @@ days = {
     #  7:  AOCDay7(),
     #  8:  AOCDay8(),
     #  9:  AOCDay9(),
-    # 10: AOCDay10(),
+    10: AOCDay10(),
     # 11: AOCDay11(),
     # 12: AOCDay12(),
     # 13: AOCDay13(),

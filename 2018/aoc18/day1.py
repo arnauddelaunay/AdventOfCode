@@ -11,6 +11,7 @@ class AOCDay1(AOCDay):
 
     def __init__(self):
         self.day = 1
+        self.split_lines = True
 
     def run1(self, inp):
         self.inp = list(map(lambda x: get_sign(x[0])*int(x[1:]), inp))

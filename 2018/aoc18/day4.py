@@ -21,6 +21,7 @@ class AOCDay4(AOCDay):
 
     def __init__(self):
         self.day = 4
+        self.split_lines = True
 
     def run1(self, inp):
         dts, events = zip(*map(split_phrase, inp))
