@@ -8,9 +8,9 @@ from .day4 import AOCDay4
 #from .day8 import AOCDay8
 #from .day9 import AOCDay9
 from .day10 import AOCDay10
-#from .day11 import AOCDay11
+from .day11 import AOCDay11
 #from .day12 import AOCDay12
-#from .day13 import AOCDay13
+from .day13 import AOCDay13
 #from .day14 import AOCDay14
 #from .day15 import AOCDay15
 #from .day16 import AOCDay16
@@ -35,9 +35,9 @@ days = {
     #  8:  AOCDay8(),
     #  9:  AOCDay9(),
     10: AOCDay10(),
-    # 11: AOCDay11(),
+    11: AOCDay11(),
     # 12: AOCDay12(),
-    # 13: AOCDay13(),
+    13: AOCDay13(),
     # 14: AOCDay14(),
     # 15: AOCDay15(),
     # 16: AOCDay16(),
