@@ -3,9 +3,10 @@ import numpy as np
 
 
 following_ones_arrangements = {
-    2: 2, # [1 1] can also be [2]
-    3: 4, # [1 1 1] can be [2 1], [1 2] or [3]
-    4: 7  # [1 1 1 1] can be [2 1 1], [1 2 1], [1 1 2], [1 3], [3 1] or [2 2]
+    2: 2,  # [1 1] can also be [2]
+    3: 4,  # [1 1 1] can be [2 1], [1 2] or [3]
+    4: 7,  # [1 1 1 1] can be [2 1 1], [1 2 1], [1 1 2], [1 3], [3 1] or [2 2]
+    5: 18  # [1 1 1 1 1] can be a lot of stuff
 }
 
 
@@ -55,16 +56,14 @@ def run2(input_path):
 
 
 if __name__ == '__main__':
+    print("Tests :")
     path = 'inputs/tests/day10a.txt'
-    print(run1(path))
-    print(run2(path))
+    print(run1(path), run2(path))
     
     path = 'inputs/tests/day10b.txt'
-    print(run1(path))
-    print(run2(path))
+    print(run1(path) ,run2(path))
 
+    print("Prod :")
     path = 'inputs/day10.txt'
-    print(run1(path))
-    print(run2(path))
-
-    
+    print("Run 1", run1(path))
+    print("Run 2", run2(path))
