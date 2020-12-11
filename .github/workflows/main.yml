@@ -19,20 +19,25 @@ jobs:
   test:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
-        uses: python@3.7.9-slim-stretch
-        with:
-          command: |
-                 pip install pipenv
-                 cd 2020 && pipenv install -d  # Install all dependencies, including development ones
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv
+          cd 2020 && pipenv install -d  # Install all dependencies, including development ones
     
       - name: Test
-        uses: python@3.7.9-slim-stretch
-        with:
-          command: cd 2020 && make test # Run custom `test` command defined in the `[scripts]` block of Pipfile
+        run: cd 2020 && make test # Run custom `test` command defined in the `[scripts]` block of Pipfile
