@@ -27,7 +27,6 @@ def run2(input_path):
     trees = 1
     for step in [(1, 1), (1, 3), (1, 5), (1, 7), (2, 1)]:
         nb_tree = run1(input_path, step)
-        print(nb_tree)
         trees *= nb_tree
     return trees
 

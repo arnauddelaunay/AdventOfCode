@@ -35,7 +35,6 @@ def run2(input_path, n=25):
     invalid_number = get_invalid_number(inputs, n)
     sum_matrix = get_sum_matrix(inputs)
     i, j = np.argwhere(sum_matrix == invalid_number)[0]
-    print(i, j)
     return max(inputs[i:j]) + min(inputs[i:j])
 
 

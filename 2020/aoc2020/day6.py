@@ -45,10 +45,6 @@ def run2(input_path):
 
 
 if __name__ == '__main__':
-    path = 'inputs/tests/day6.txt'
-    #print(run1(path))
-    #print(run2(path))
-    
     path = 'inputs/day6.txt'
     print(run1(path))
     print(run2(path))

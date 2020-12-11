@@ -72,10 +72,6 @@ def run2(input_path):
         for field, field_rule in REQUIRED_FIELDS.items():
             if field_rule(passport[field]):
                 valid_fields += 1
-            else:
-                if field == 'pid':
-                    print(passport[field])
-                    print(passport)
         if valid_fields == len(REQUIRED_FIELDS):
             valid_passports.append(passport)
     return len(valid_passports)
@@ -83,10 +79,6 @@ def run2(input_path):
 
 
 if __name__ == '__main__':
-    path = 'inputs/tests/day4.txt'
-    print(run1(path))
-    print(run2(path))
-
     path = 'inputs/day4.txt'
     print(run1(path))
     print(run2(path))

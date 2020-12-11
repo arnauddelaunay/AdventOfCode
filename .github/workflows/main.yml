@@ -25,12 +25,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Install dependecies
-        uses: VaultVulp/action-pipenv@v2.0.1
+      - name: Install dependencies
+        uses: python@3.7.9-slim-stretch
         with:
-          command: install -d # Install all dependencies, including development ones
+          command: |
+                 pip install pipenv
+                 cd 2020 && pipenv install -d  # Install all dependencies, including development ones
     
       - name: Test
-        uses: VaultVulp/action-pipenv@v2.0.1
+        uses: python@3.7.9-slim-stretch
         with:
-          command: run test # Run custom `test` command defined in the `[scripts]` block of Pipfile
+          command: cd 2020 && make test # Run custom `test` command defined in the `[scripts]` block of Pipfile

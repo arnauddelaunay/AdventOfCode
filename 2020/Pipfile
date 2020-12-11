@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "6.1.2"
+pylint = "*"
 
 [packages]
 numpy = "1.19.4"
