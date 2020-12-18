@@ -1,0 +1,12 @@
+departure1: 0-1 or 4-19
+departure2: 0-5 or 8-19
+departure3: 0-13 or 16-19
+seat: 70-72 or 75-80
+
+your ticket:
+11,12,13,71
+
+nearby tickets:
+3,9,18,76
+15,1,5,77
+5,14,18,78
